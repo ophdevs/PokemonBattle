@@ -4,8 +4,13 @@ import model.PokemonFogo;
 
 public class Main {
     public static void main(String[] args) {
-        Pokemon charmander = new PokemonFogo("charmander",60, 30,40);
-        Pokemon squirtle = new PokemonAgua("squirtle",60, 30,40);
+        PokemonFogo charmander = new PokemonFogo("charmander", 60, 70, 40);
+        PokemonAgua squirtle = new PokemonAgua("squirtle", 60, 70, 40);
 
+        charmander.atacar(squirtle);
+        System.out.println(squirtle.hp);
+
+        squirtle.atacar(charmander);
+        System.out.println(charmander.hp);
     }
 }

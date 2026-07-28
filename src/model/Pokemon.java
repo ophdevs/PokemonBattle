@@ -1,9 +1,9 @@
 package model;
 
 public abstract class Pokemon {
-    String nome;
-    int hp, hpMax, ataque, defesa;
-    TipoElemento tipo;
+    public String nome;
+    public int hp, hpMax, ataque, defesa;
+    public TipoElemento tipo;
 
     public Pokemon(String nome, int hpMax, int ataque, int defesa, TipoElemento tipo) {
         this.nome = nome;
