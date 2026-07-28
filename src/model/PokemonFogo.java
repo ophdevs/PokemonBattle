@@ -4,8 +4,8 @@ import combate.Atacavel;
 
 public class PokemonFogo extends Pokemon implements Atacavel {
 
-    public PokemonFogo(String nome, int hp, int hpMax, int ataque, int defesa, TipoElemento tipo) {
-        super(nome, hp, hpMax, ataque, defesa, TipoElemento.FOGO);
+    public PokemonFogo(String nome, int hpMax, int ataque, int defesa) {
+        super(nome,hpMax, ataque, defesa, TipoElemento.FOGO);
     }
 
     @Override

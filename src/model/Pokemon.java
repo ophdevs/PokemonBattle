@@ -5,7 +5,7 @@ public abstract class Pokemon {
     int hp, hpMax, ataque, defesa;
     TipoElemento tipo;
 
-    public Pokemon(String nome, int hp, int hpMax, int ataque, int defesa, TipoElemento tipo) {
+    public Pokemon(String nome, int hpMax, int ataque, int defesa, TipoElemento tipo) {
         this.nome = nome;
         this.hp = hpMax;
         this.hpMax = hpMax;

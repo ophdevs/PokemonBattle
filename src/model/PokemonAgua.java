@@ -3,8 +3,8 @@ package model;
 import combate.Atacavel;
 
 public class PokemonAgua extends Pokemon implements Atacavel {
-    public PokemonAgua(String nome, int hp, int hpMax, int ataque, int defesa, TipoElemento tipo) {
-        super(nome, hp, hpMax, ataque, defesa, TipoElemento.AGUA);
+    public PokemonAgua(String nome, int hpMax, int ataque, int defesa) {
+        super(nome,hpMax, ataque, defesa, TipoElemento.AGUA);
     }
 
     @Override
