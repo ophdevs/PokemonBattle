@@ -24,6 +24,6 @@ public class PokemonPlanta extends Pokemon implements Atacavel, Curavel {
 
     @Override
     public void curar(int quantidade){
-        this.hp = Math.min(hpMax, hp + quantidade);;
+        this.hp = Math.min(hpMax, hp + quantidade);; // feito para curar os pokemons
     }
 }
