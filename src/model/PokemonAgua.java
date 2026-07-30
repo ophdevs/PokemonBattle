@@ -16,9 +16,7 @@ public class PokemonAgua extends Pokemon implements Atacavel {
     @Override
     public void atacar(Pokemon alvo){
         int dano = this.ataque - alvo.defesa;
-        if (dano < 0 ) {
-            dano = 0;
-        }
+        if (dano < 0 ) dano = 0;
         System.out.println( this.nome + " atacou " + alvo.nome + "e causou " + dano + " de dano ");
         alvo.receberDano(dano);
     }
