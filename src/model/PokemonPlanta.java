@@ -9,7 +9,7 @@ public class PokemonPlanta extends Pokemon implements Atacavel, Curavel {
 
     @Override
     public void atacarEspecial(Pokemon alvo){
-        System.out.println(nome + " usou Lança-Chamas!");
+        System.out.println(nome + " Folha Navalha");
         int danoBase = this.ataque * 2 - alvo.defesa;
         double vantagem = this.tipo.calcularVantagem(alvo.tipo);
         int danoFinal = (int) (danoBase * vantagem);

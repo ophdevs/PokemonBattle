@@ -7,8 +7,9 @@ public class Main {
         PokemonFogo charmander = new PokemonFogo("charmander", 60, 70, 40);
         PokemonAgua squirtle = new PokemonAgua("squirtle", 60, 70, 40);
 
-        charmander.atacar(squirtle);
+        charmander.atacarEspecial(squirtle);
         System.out.println(squirtle.hp);
+
 
         squirtle.atacar(charmander);
         System.out.println(charmander.hp);
