@@ -10,8 +10,16 @@ public class PokemonPlanta extends Pokemon implements Atacavel, Curavel {
     @Override
     public void atacarEspecial(Pokemon alvo){
         System.out.println(nome + " usou Lança-Chamas!");
-        int dano = this.ataque * 2 - alvo.defesa;
-        alvo.receberDano(dano);
+        int danoBase = this.ataque * 2 - alvo.defesa;
+        double vantagem = this.tipo.calcularVantagem(alvo.tipo);
+        int danoFinal = (int) (danoBase * vantagem);
+
+        if (vantagem > 1.0){
+            System.out.println("É super efetivo!");
+        }else if (vantagem < 1.0){
+            System.out.println("Não é muito efetivo...");
+        }
+        alvo.receberDano(danoFinal);
     }
 
     @Override
@@ -24,6 +32,6 @@ public class PokemonPlanta extends Pokemon implements Atacavel, Curavel {
 
     @Override
     public void curar(int quantidade){
-        this.hp = Math.min(hpMax, hp + quantidade);; // feito para curar os pokemons
+        this.hp = Math.min(hpMax, hp + quantidade);
     }
 }
