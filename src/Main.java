@@ -9,8 +9,6 @@ public class Main {
 
         charmander.atacarEspecial(squirtle);
         System.out.println(squirtle.hp);
-
-
         squirtle.atacar(charmander);
         System.out.println(charmander.hp);
     }
