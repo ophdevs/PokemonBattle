@@ -3,22 +3,8 @@ import combate.Atacavel;
 
 public class PokemonFogo extends Pokemon implements Atacavel {
 
-    public PokemonFogo(String nome, int hpMax, int ataque, int defesa) {
-        super(nome,hpMax, ataque, defesa, TipoElemento.FOGO);
-    }
-
-    @Override
-    public void atacarEspecial(Pokemon alvo){
-        System.out.println(nome + " usou Lança-Chamas!");
-        int danoBase = this.ataque * 2 - alvo.defesa;
-        double vantagem = this.tipo.calcularVantagem(alvo.tipo);
-        int danoFinal = (int) (danoBase * vantagem);
-        if (vantagem > 1.0){
-            System.out.println("É super efetivo!");
-        }else if (vantagem < 1.0){
-            System.out.println("Não é muito efetivo...");
-        }
-        alvo.receberDano(danoFinal);
+    public PokemonFogo(String nome, int hpMax, int ataque, int defesa, String ataqueName) {
+        super(nome,hpMax, ataque, defesa, TipoElemento.FOGO, "Lança-Chamas");
     }
 
     @Override

@@ -3,14 +3,7 @@ import combate.Atacavel;
 
 public class PokemonEletrico extends Pokemon implements Atacavel {
     public PokemonEletrico(String nome, int hpMax, int ataque, int defesa) {
-        super(nome,hpMax, ataque, defesa, TipoElemento.ELETRICO);
-    }
-
-    @Override
-    public void atacarEspecial(Pokemon alvo){
-        System.out.println(nome + " usou Lança-Chamas!");
-        int dano = this.ataque * 2 - alvo.defesa;
-        alvo.receberDano(dano);
+        super(nome,hpMax, ataque, defesa, TipoElemento.ELETRICO, "Raio do trovao");
     }
 
     @Override

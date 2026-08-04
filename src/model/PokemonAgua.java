@@ -3,14 +3,7 @@ import combate.Atacavel;
 
 public class PokemonAgua extends Pokemon implements Atacavel {
     public PokemonAgua(String nome, int hpMax, int ataque, int defesa) {
-        super(nome,hpMax, ataque, defesa, TipoElemento.AGUA);
-    }
-
-    @Override
-    public void atacarEspecial(Pokemon alvo){
-        System.out.println(nome + " usou Lança-Chamas!");
-        int dano = this.ataque * 2 - alvo.defesa;
-        alvo.receberDano(dano);
+        super(nome,hpMax, ataque, defesa, TipoElemento.AGUA, "Bomba D'agua");
     }
 
     @Override
