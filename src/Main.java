@@ -1,3 +1,4 @@
+import combate.Batalha;
 import model.Pokemon;
 import model.PokemonAgua;
 import model.PokemonFogo;
@@ -7,6 +8,7 @@ public class Main {
         PokemonFogo charmander = new PokemonFogo("charmander", 60, 70, 40);
         PokemonAgua squirtle = new PokemonAgua("squirtle", 60, 70, 40);
 
+        new Batalha(charmander, squirtle);
         charmander.atacarEspecial(squirtle);
         System.out.println(squirtle.hp);
         squirtle.atacar(charmander);
