@@ -4,7 +4,7 @@ import combate.Atacavel;
 
 public abstract class Pokemon{
     public String nome;
-    public int hp, hpMax, ataque, defesa;
+    public double hp, hpMax, ataque, defesa;
     public TipoElemento tipo;
     public String ataqueName;
 
@@ -20,7 +20,7 @@ public abstract class Pokemon{
 
     public void atacarEspecial(Pokemon alvo){
         System.out.println("usou " + this.ataqueName);
-        int danoBase = this.ataque * 2 - alvo.defesa;
+        double danoBase = this.ataque * 2 - alvo.defesa;
         double vantagem = this.tipo.calcularVantagem(alvo.tipo);
         int danoFinal = (int) (danoBase * vantagem);
         if (vantagem > 1.0){
