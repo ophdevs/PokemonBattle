@@ -19,7 +19,7 @@ public class Batalha {
            p2.hp = p2.hp - (p1.ataque * vantagemp1);
             System.out.println(p1.nome + " atacou " + p2.nome);
            if (p2.hp > 0){
-               p1.hp = p1.hp - p2.ataque;
+               p1.hp = p1.hp - ( p2.ataque * vantagemp2 );
                System.out.println(p2.nome + " atacou " + p1.nome);
            }
         }
